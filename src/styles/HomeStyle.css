@@ -1,0 +1,141 @@
+.bannerContainer1 {
+  height: 55vh;
+  margin-top: 170px;
+  justify-content: center;
+  text-align: center;
+}
+
+.bannerContainer1 h1 {
+  font-size: 50px;
+  color: #505050;
+}
+
+.bannerContainer1 button {
+  background-color: #298bea;
+  margin-top: 50px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 53px;
+  width: 220px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.bannerContainer1 button:hover {
+  background-color: rgb(0, 78, 156);
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.bannerContainer2 {
+  height: 75vh;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.tabHeading {
+  padding-top: 68px;
+  margin-bottom: 40px;
+  color: #505050;
+  text-align: center;
+}
+
+.actionClass {
+  text-align: center;
+}
+
+.actionClass h2 {
+  color: #505050;
+}
+
+.actionClass button {
+  background-color: #298bea;
+  margin-top: 50px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 53px;
+  width: 300px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.actionClass button:hover {
+  background-color: rgb(0, 78, 156);
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.tabVideoClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.actionClass {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#csvInput {
+  margin-top: 50px;
+  padding-left: 120px;
+  font-size: 18px;
+  color: #505050;
+}
+
+/* mobile responsive code  */
+@media only screen and (max-width: 600px) {
+  .bannerContainer1 {
+    margin-top: 130px;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bannerContainer1 h1 {
+    font-size: 25px;
+  }
+
+  .bannerContainer1 button {
+    background-color: #298bea;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 30px;
+    width: 120px;
+    text-decoration: none;
+    color: #353535;
+    font-size: 13px;
+  }
+
+  .bannerContainer1 button:hover {
+    background-color: rgb(138, 196, 255);
+    cursor: pointer;
+    transition: 0.3s ease-in;
+  }
+
+  .bannerContainer2 {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
