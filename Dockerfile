@@ -9,7 +9,7 @@ RUN npm install
 
 RUN npm install recharts
 
-COPY ./ /app
+COPY ./ /app/
 
 RUN npm run build
 
