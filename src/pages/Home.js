@@ -16,7 +16,7 @@ const Home = () => {
   const [currentTabIndex, setCurrentTabIndex] = useState(0);
   const ref = useRef(null);
   const apiUrl =
-    "https://backend-stockstat-33yyspgzpa-as.a.run.app:8000/api/analyse";
+    "https://backend-stockstat-33yyspgzpa-as.a.run.app/api/analyse";
   //const inputFile = useRef(null);
 
   const allowedExtensions = ["csv"];
