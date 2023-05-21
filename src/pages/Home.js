@@ -15,6 +15,8 @@ const Home = () => {
   const navigate = useNavigate();
   const [currentTabIndex, setCurrentTabIndex] = useState(0);
   const ref = useRef(null);
+  const apiUrl =
+    "https://backend-stockstat-33yyspgzpa-as.a.run.app:8000/api/analyse";
   //const inputFile = useRef(null);
 
   const allowedExtensions = ["csv"];
@@ -44,7 +46,7 @@ const Home = () => {
 
       // axios call to /api/analyse api
       axios
-        .post("http://localhost:8000/api/analyse", jdata)
+        .post(apiUrl, jdata)
         .then((res) => {
           navigate("/dashboard", { state: res.data });
         })
