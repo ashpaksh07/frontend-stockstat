@@ -68,7 +68,7 @@ const Home = () => {
           <Grid item xs={6}>
             <div className="bannerContainer1">
               <h1>
-                Find out how your <br /> portfolio is performing
+                Find out how your <br /> portfolio is performing!
               </h1>
 
               <Button sx={{ textTransform: "none" }} onClick={ScrollOnClick}>
