@@ -17,9 +17,9 @@ const Home = () => {
   const [loading, setLoading] = React.useState(false);
   const ref = useRef(null);
 
-  // const apiUrl =
-  //   "https://backend-stockstat-33yyspgzpa-as.a.run.app/api/analyse";
-  const apiUrl = "http://localhost:8000/api/analyse";
+  const apiUrl =
+    "https://backend-stockstat-33yyspgzpa-as.a.run.app/api/analyse";
+  //const apiUrl = "http://localhost:8000/api/analyse";
 
   const allowedExtensions = ["csv"];
   const [error, setError] = useState("");
