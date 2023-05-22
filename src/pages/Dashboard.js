@@ -16,7 +16,7 @@ const Dashboard = () => {
   return (
     <Layout>
       <Toolbar />
-
+      {window.scrollTo(0, 40)}
       <Box
         bgcolor="#f3f3f3"
         sx={{ display: "inline-flex", ml: 9, borderRadius: 3 }}

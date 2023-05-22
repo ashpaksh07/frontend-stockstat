@@ -4,7 +4,7 @@ import Banner from "../images/banner2.png";
 import ActionBanner from "../images/action-banner.svg";
 import HomeStyle from "../styles/HomeStyle.css";
 import Grid from "@mui/material/Grid";
-import { Box, Tabs, Tab, Button, Alert } from "@mui/material";
+import { Box, Tabs, Tab, Button, Alert, LinearProgress } from "@mui/material";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import CloudUploadOutlinedIcon from "@mui/icons-material/CloudUploadOutlined";
@@ -14,10 +14,12 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
   const [currentTabIndex, setCurrentTabIndex] = useState(0);
+  const [loading, setLoading] = React.useState(false);
   const ref = useRef(null);
-  const apiUrl =
-    "https://backend-stockstat-33yyspgzpa-as.a.run.app/api/analyse";
-  //const inputFile = useRef(null);
+
+  // const apiUrl =
+  //   "https://backend-stockstat-33yyspgzpa-as.a.run.app/api/analyse";
+  const apiUrl = "http://localhost:8000/api/analyse";
 
   const allowedExtensions = ["csv"];
   const [error, setError] = useState("");
@@ -46,8 +48,9 @@ const Home = () => {
 
       // axios call to /api/analyse api
       axios
-        .post(apiUrl, jdata)
+        .post(apiUrl, jdata, setLoading(true))
         .then((res) => {
+          setLoading(false);
           navigate("/dashboard", { state: res.data });
         })
         .catch((error) => console.error("Error: $(error) "));
@@ -185,6 +188,15 @@ const Home = () => {
                 ""
               )}
             </Box>
+            {loading ? (
+              <Box color="#505050">
+                <p>Loading...</p>
+                <br />
+                <LinearProgress />
+              </Box>
+            ) : (
+              ""
+            )}
           </div>
         </Box>
       </div>
