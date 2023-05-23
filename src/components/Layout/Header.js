@@ -30,7 +30,7 @@ function Header() {
         sx={{ flexGrow: 1 }}
       >
         <Link to={"/"}>
-          <img src={logo} alt="logo" height={"30"} width="120" />
+          <img loading="lazy" src={logo} alt="logo" height={"30"} width="120" />
         </Link>
       </Typography>
       <Divider />
@@ -76,7 +76,13 @@ function Header() {
             >
               <Box sx={{ ml: 5 }}>
                 <Link to={"/"}>
-                  <img src={logo} alt="logo" height={"63"} width="230" />
+                  <img
+                    loading="lazy"
+                    src={logo}
+                    alt="logo"
+                    height={"63"}
+                    width="230"
+                  />
                 </Link>
               </Box>
             </Typography>

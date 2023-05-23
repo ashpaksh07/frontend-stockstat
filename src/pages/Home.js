@@ -11,6 +11,9 @@ import CloudUploadOutlinedIcon from "@mui/icons-material/CloudUploadOutlined";
 import Papa from "papaparse";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Gif1 from "../images/desktop-gif.gif";
+import Gif2 from "../images/mobile.gif";
+
 const Home = () => {
   const navigate = useNavigate();
   const [currentTabIndex, setCurrentTabIndex] = useState(0);
@@ -121,7 +124,7 @@ const Home = () => {
         {currentTabIndex === 0 && (
           <Box sx={{ p: 3 }}>
             <div className="tabVideoClass">
-              <iframe
+              {/* <iframe
                 width="900"
                 height="500"
                 src="https://www.youtube.com/embed/2REkk9SCRn0"
@@ -129,7 +132,8 @@ const Home = () => {
                 allow="autoplay; encrypted-media"
                 allowFullScreen
                 title="video"
-              />
+              /> */}
+              <img src={Gif1} loading="lazy" alt="Desktop Gif" />
             </div>
           </Box>
         )}
@@ -137,7 +141,7 @@ const Home = () => {
         {currentTabIndex === 1 && (
           <Box sx={{ p: 3 }}>
             <div className="tabVideoClass">
-              <iframe
+              {/* <iframe
                 width="900"
                 height="500"
                 src="https://www.youtube.com/embed/2REkk9SCRn0"
@@ -145,7 +149,8 @@ const Home = () => {
                 allow="autoplay; encrypted-media"
                 allowFullScreen
                 title="video"
-              />
+              /> */}
+              <img src={Gif2} loading="lazy" height="500px" alt="Mobile Gif" />
             </div>
           </Box>
         )}
