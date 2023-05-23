@@ -76,8 +76,10 @@ const Home = () => {
           <Grid item xs={6}>
             <div className="bannerContainer1">
               <h1>
-                Find out how your <br /> portfolio is performing!
+                Find out all hidden <br /> charges in Zerodha!
               </h1>
+              <br />
+              <p>Just upload a csv and get all details in single click.</p>
 
               <Button sx={{ textTransform: "none" }} onClick={ScrollOnClick}>
                 <CloudUploadOutlinedIcon sx={{ mr: "10px", fontSize: 22 }} />
@@ -113,12 +115,12 @@ const Home = () => {
           <Tab
             icon={<LaptopMacIcon />}
             iconPosition="start"
-            label="Using Desktop Browser"
+            label="Using Desktop / Laptop"
           />
           <Tab
             icon={<PhoneAndroidIcon />}
             iconPosition="start"
-            label="Using Mobile Browser"
+            label="Using Mobile"
           />
         </Tabs>
         {currentTabIndex === 0 && (
