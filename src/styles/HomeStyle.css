@@ -116,10 +116,20 @@
   background-size: contain;
 }
 
+#gif1 {
+  height: 500px;
+  width: 830px;
+}
+
+#gif2 {
+  height: 550px;
+  width: 260px;
+}
+
 /* mobile responsive code  */
 @media only screen and (max-width: 600px) {
   .bannerContainer1 {
-    margin-top: 130px;
+    margin-top: 40px;
     height: 20vh;
     justify-content: center;
     align-items: center;
@@ -129,7 +139,15 @@
   }
 
   .bannerContainer1 h1 {
-    font-size: 25px;
+    font-size: 17px;
+  }
+
+  .tabHeading h2 {
+    font-size: 17px;
+  }
+
+  .bannerContainer1 p {
+    font-size: 11px;
   }
 
   .bannerContainer1 button {
@@ -138,11 +156,21 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    height: 30px;
-    width: 120px;
+    height: 25px;
+    width: 110px;
     text-decoration: none;
-    color: #353535;
-    font-size: 13px;
+    color: #ffffff;
+    font-size: 11px;
+  }
+
+  #gif1 {
+    height: 200px;
+    width: 320px;
+  }
+
+  #gif2 {
+    height: 270px;
+    width: 135px;
   }
 
   .bannerContainer1 button:hover {
@@ -151,13 +179,21 @@
     transition: 0.3s ease-in;
   }
 
+  #tabbox {
+    height: 550px;
+  }
+
   .bannerContainer2 {
-    height: 60vh;
+    height: 28vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  .actionClass h2 {
+    font-size: 15px;
   }
 }

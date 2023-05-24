@@ -1,54 +1,101 @@
 .paraText {
-    padding: 18px;
+  padding: 18px;
 }
 
 .paraText h2 {
-    padding-top: 5px;
-    font-size: 30px;
-    color: #00C49F;
+  padding-top: 5px;
+  font-size: 30px;
+  color: #00c49f;
 }
 
 .paraText p {
-    color: #606060;
-    font-size: 11px;
+  color: #606060;
+  font-size: 11px;
 }
 
 .pnlclass {
-    padding: 18px;
+  padding: 18px;
 }
 
 .uploadButtonClass button {
-    background-color: #298BEA;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    height: 45px;
-    width: 220px;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 15px;
-    position: absolute;
-    right:0;
-    margin-right: 80px;
-    font-weight: "bold";
-    padding: "10px 20px";
+  background-color: #298bea;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 45px;
+  width: 220px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  position: absolute;
+  right: 0;
+  margin-right: 80px;
+  font-weight: "bold";
+  padding: "10px 20px";
 }
 
 .uploadButtonClass button:hover {
-    background-color: rgb(0, 78, 156);
-    cursor: pointer;
-    transition: 0.3s ease-in;
+  background-color: rgb(0, 78, 156);
+  cursor: pointer;
+  transition: 0.3s ease-in;
 }
 
 .statclass {
-    color: #606060;
-    font-size: 14px;
+  color: #606060;
+  font-size: 14px;
 }
 
 .profitnum {
-    color: #0BDA51;
+  color: #0bda51;
 }
 
 .lossnum {
-    color: #E30B5C;
+  color: #e30b5c;
+}
+
+/* mobile responsive code  */
+@media only screen and (max-width: 600px) {
+  .paraText {
+    padding: 1px;
+  }
+
+  .paraText h2 {
+    padding-top: 3px;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #00c49f;
+  }
+
+  .paraText p {
+    padding-top: 10px;
+    font-size: 6px;
+  }
+
+  #workicon {
+    font-size: 40px;
+    margin-left: 1;
+  }
+
+  .uploadButtonClass button {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 30px;
+    width: 120px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 8px;
+    position: absolute;
+    right: 0;
+    margin-right: 12px;
+    margin-top: 2px;
+  }
+
+  .graphthreetext {
+    font-size: 10px;
+  }
+
+  .graphfourtext {
+    font-size: 8px;
+  }
 }

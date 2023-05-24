@@ -1,5 +1,6 @@
 import React from "react";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
+import { Box } from "@mui/material";
 
 const BarChartG2 = (props) => {
   const data = [
@@ -25,34 +26,79 @@ const BarChartG2 = (props) => {
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
   };
   return (
-    <BarChart
-      width={350}
-      height={300}
-      data={data}
-      margin={{
-        top: 20,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Bar
-        dataKey="uv"
-        fill="#8884d8"
-        shape={<TriangleBar />}
-        label={{ position: "top" }}
-      >
-        {data.map((entry, index) => (
-          <Cell
-            key={`cell-${index}`}
-            fill={props.data.fno_pnl > 0 ? "#00C49F" : "#FA5F55"}
+    <>
+      <Box sx={{ display: { xs: "none", sm: "block" }, mr: 5 }}>
+        <BarChart
+          width={350}
+          height={300}
+          data={data}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Bar
+            dataKey="uv"
+            fill="#8884d8"
+            shape={<TriangleBar />}
+            label={{ position: "top" }}
+          >
+            {data.map((entry, index) => (
+              <Cell
+                key={`cell-${index}`}
+                fill={props.data.fno_pnl > 0 ? "#00C49F" : "#FA5F55"}
+              />
+            ))}
+          </Bar>
+        </BarChart>
+      </Box>
+
+      {/* <<<<<<<<<<<<< mobile view starts here >>>>>>>>>>>>>> */}
+      <Box sx={{ display: { xs: "block", sm: "none" }, mr: 5 }}>
+        <BarChart
+          width={350}
+          height={210}
+          data={data}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis
+            dataKey="name"
+            style={{
+              fontSize: "8px",
+            }}
           />
-        ))}
-      </Bar>
-    </BarChart>
+          <YAxis
+            style={{
+              fontSize: "8px",
+            }}
+          />
+          <Bar
+            dataKey="uv"
+            fill="#8884d8"
+            shape={<TriangleBar />}
+            label={{ position: "top" }}
+          >
+            {data.map((entry, index) => (
+              <Cell
+                key={`cell-${index}`}
+                fill={props.data.fno_pnl > 0 ? "#00C49F" : "#FA5F55"}
+              />
+            ))}
+          </Bar>
+        </BarChart>
+      </Box>
+    </>
   );
 };
 

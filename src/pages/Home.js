@@ -103,6 +103,7 @@ const Home = () => {
       </>
 
       <Box
+        id="tabbox"
         sx={{
           bgcolor: "#f0f0f0",
           height: "870px",
@@ -141,7 +142,7 @@ const Home = () => {
                 allowFullScreen
                 title="video"
               /> */}
-              <img src={Gif1} loading="lazy" alt="Desktop Gif" />
+              <img id="gif1" src={Gif1} loading="lazy" alt="Desktop Gif" />
             </div>
           </Box>
         )}
@@ -158,7 +159,7 @@ const Home = () => {
                 allowFullScreen
                 title="video"
               /> */}
-              <img src={Gif2} loading="lazy" height="500px" alt="Mobile Gif" />
+              <img id="gif2" src={Gif2} loading="lazy" alt="Mobile Gif" />
             </div>
           </Box>
         )}

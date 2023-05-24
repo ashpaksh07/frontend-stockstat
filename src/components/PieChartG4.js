@@ -49,164 +49,315 @@ const PieChartG4 = (props) => {
   ];
 
   return (
-    <div>
-      <Box
-        display="grid"
-        backgroundColor="#f3f3f3"
-        gridTemplateColumns="repeat(4, 1fr)"
-        gridAutoRows="26px"
-        gap="15px"
-        alignItems="center"
-        justifyContent="center"
-        sx={{ borderRadius: 3 }}
-      >
+    <>
+      <Box sx={{ display: { xs: "none", sm: "block" }, mr: 0.5 }}>
         <Box
-          gridColumn="span 2"
-          display="flex"
+          display="grid"
+          backgroundColor="#f3f3f3"
+          gridTemplateColumns="repeat(4, 1fr)"
+          gridAutoRows="26px"
+          gap="15px"
           alignItems="center"
           justifyContent="center"
-          paddingLeft="130px"
+          sx={{ borderRadius: 3 }}
         >
-          <PieChart width={1000} height={600}>
-            <Pie
-              dataKey="value"
-              data={data}
-              innerRadius={80}
-              outerRadius={110}
-              fill="#82ca9d"
-              paddingAngle={0.5}
-            >
-              {data.map((entry, index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={COLORS[index % COLORS.length]}
-                />
-              ))}
-            </Pie>
-            <Tooltip />
-          </PieChart>
-        </Box>
-        <Box
-          gridColumn="span 2"
-          display="flex"
-          paddingLeft="40px"
-          paddingRight="10px"
-        >
-          <div className="graphthreetext">
-            <Box display="inline-flex">
-              <Box
-                backgroundColor="#0088FE"
-                marginRight="10px"
-                height="12px"
-                width="12px"
-                marginTop="3px"
-              ></Box>
-              {data[0].name}
-            </Box>
-            <Box display="inline-flex">
-              <Box
-                backgroundColor="#00C49F"
-                marginRight="10px"
-                height="12px"
-                width="12px"
-                marginTop="3px"
-              ></Box>
-              {data[1].name}
-            </Box>
-            <Box display="inline-flex">
-              <Box
-                backgroundColor="#FFBB28"
-                marginRight="10px"
-                height="12px"
-                width="12px"
-                marginTop="3px"
-              ></Box>
-              {data[2].name}
-            </Box>
-            <Box display="inline-flex">
-              <Box
-                backgroundColor="#FF8042"
-                marginRight="10px"
-                height="12px"
-                width="12px"
-                marginTop="3px"
-              ></Box>
-              {data[3].name}
-            </Box>
-            <Box display="inline-flex">
-              <Box
-                backgroundColor="#000066"
-                marginRight="10px"
-                height="12px"
-                width="12px"
-                marginTop="3px"
-              ></Box>
-              {data[4].name}
-            </Box>
-            <Box display="inline-flex">
-              <Box
-                backgroundColor="#003366"
-                marginRight="10px"
-                height="12px"
-                width="12px"
-                marginTop="3px"
-              ></Box>
-              {data[5].name}
-            </Box>
-            <Box display="inline-flex">
-              <Box
-                backgroundColor="#006666"
-                marginRight="10px"
-                height="12px"
-                width="12px"
-                marginTop="3px"
-              ></Box>
-              {data[6].name}
-            </Box>
-            <Box display="inline-flex">
-              <Box
-                backgroundColor="#333366"
-                marginRight="10px"
-                height="12px"
-                width="12px"
-                marginTop="3px"
-              ></Box>
-              {data[7].name}
-            </Box>
-            <Box display="inline-flex">
-              <Box
-                backgroundColor="#339966"
-                marginRight="10px"
-                height="12px"
-                width="12px"
-                marginTop="3px"
-              ></Box>
-              {data[8].name}
-            </Box>
-            <Box display="inline-flex">
-              <Box
-                backgroundColor="#663366"
-                marginRight="10px"
-                height="12px"
-                width="12px"
-                marginTop="3px"
-              ></Box>
-              {data[9].name}
-            </Box>
-            <Box display="inline-flex">
-              <Box
-                backgroundColor="#993366"
-                marginRight="10px"
-                height="12px"
-                width="12px"
-                marginTop="3px"
-              ></Box>
-              {data[10].name}
-            </Box>
-          </div>
+          <Box
+            gridColumn="span 2"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            paddingLeft="130px"
+          >
+            <PieChart width={1000} height={600}>
+              <Pie
+                dataKey="value"
+                data={data}
+                innerRadius={80}
+                outerRadius={110}
+                fill="#82ca9d"
+                paddingAngle={0.5}
+              >
+                {data.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={COLORS[index % COLORS.length]}
+                  />
+                ))}
+              </Pie>
+              <Tooltip />
+            </PieChart>
+          </Box>
+          <Box
+            gridColumn="span 2"
+            display="flex"
+            paddingLeft="40px"
+            paddingRight="10px"
+          >
+            <div className="graphthreetext">
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#0088FE"
+                  marginRight="10px"
+                  height="12px"
+                  width="12px"
+                  marginTop="3px"
+                ></Box>
+                {data[0].name}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#00C49F"
+                  marginRight="10px"
+                  height="12px"
+                  width="12px"
+                  marginTop="3px"
+                ></Box>
+                {data[1].name}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#FFBB28"
+                  marginRight="10px"
+                  height="12px"
+                  width="12px"
+                  marginTop="3px"
+                ></Box>
+                {data[2].name}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#FF8042"
+                  marginRight="10px"
+                  height="12px"
+                  width="12px"
+                  marginTop="3px"
+                ></Box>
+                {data[3].name}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#000066"
+                  marginRight="10px"
+                  height="12px"
+                  width="12px"
+                  marginTop="3px"
+                ></Box>
+                {data[4].name}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#003366"
+                  marginRight="10px"
+                  height="12px"
+                  width="12px"
+                  marginTop="3px"
+                ></Box>
+                {data[5].name}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#006666"
+                  marginRight="10px"
+                  height="12px"
+                  width="12px"
+                  marginTop="3px"
+                ></Box>
+                {data[6].name}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#333366"
+                  marginRight="10px"
+                  height="12px"
+                  width="12px"
+                  marginTop="3px"
+                ></Box>
+                {data[7].name}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#339966"
+                  marginRight="10px"
+                  height="12px"
+                  width="12px"
+                  marginTop="3px"
+                ></Box>
+                {data[8].name}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#663366"
+                  marginRight="10px"
+                  height="12px"
+                  width="12px"
+                  marginTop="3px"
+                ></Box>
+                {data[9].name}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#993366"
+                  marginRight="10px"
+                  height="12px"
+                  width="12px"
+                  marginTop="3px"
+                ></Box>
+                {data[10].name}
+              </Box>
+            </div>
+          </Box>
         </Box>
       </Box>
-    </div>
+
+      {/* <<<<<<<<<<<<< mobile view starts here >>>>>>>>>>>>>> */}
+      <Box sx={{ display: { xs: "block", sm: "none" }, mr: 0.5 }}>
+        <Box
+          display="grid"
+          backgroundColor="#f3f3f3"
+          gridTemplateColumns="repeat(4, 1fr)"
+          gridAutoRows="26px"
+          gap="15px"
+          alignItems="center"
+          justifyContent="center"
+          sx={{ borderRadius: 3 }}
+        >
+          <Box
+            gridColumn="span 2"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            paddingLeft="30px"
+          >
+            <PieChart width={500} height={300}>
+              <Pie
+                dataKey="value"
+                data={data}
+                innerRadius={60}
+                outerRadius={80}
+                fill="#82ca9d"
+                paddingAngle={0.5}
+              >
+                {data.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={COLORS[index % COLORS.length]}
+                  />
+                ))}
+              </Pie>
+              <Tooltip />
+            </PieChart>
+          </Box>
+          <Box
+            gridColumn="span 2"
+            display="flex"
+            paddingLeft="20px"
+            paddingRight="1px"
+          >
+            <div className="graphfourtext">
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#0088FE"
+                  marginRight="10px"
+                  height="9px"
+                  width="9px"
+                ></Box>
+                {data[0].name} : Rs. {props.data.long_term_sell_charge}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#00C49F"
+                  marginRight="10px"
+                  height="9px"
+                  width="9px"
+                ></Box>
+                {data[1].name} : Rs. {props.data.intraday_charges}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#FFBB28"
+                  marginRight="10px"
+                  height="9px"
+                  width="9px"
+                ></Box>
+                {data[2].name} : Rs. {props.data.account_maintenance_charges}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#FF8042"
+                  marginRight="10px"
+                  height="9px"
+                  width="9px"
+                ></Box>
+                {data[3].name} : Rs. {props.data.being_payment_gateway_charges}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#000066"
+                  marginRight="10px"
+                  height="9px"
+                  width="9px"
+                ></Box>
+                {data[4].name} : Rs. {props.data.smallcase_charges}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#003366"
+                  marginRight="10px"
+                  height="9px"
+                  width="9px"
+                ></Box>
+                {data[5].name} : Rs. {props.data.kite_connect_charges}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#006666"
+                  marginRight="10px"
+                  height="9px"
+                  width="9px"
+                ></Box>
+                {data[6].name} : Rs. {props.data.streak_charges}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#333366"
+                  marginRight="10px"
+                  height="9px"
+                  width="9px"
+                ></Box>
+                {data[7].name} : Rs. {props.data.payment_delay_charges}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#339966"
+                  marginRight="10px"
+                  height="9px"
+                  width="9px"
+                ></Box>
+                {data[8].name} : Rs. {props.data.security_tax}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#663366"
+                  marginRight="10px"
+                  height="9px"
+                  width="9px"
+                ></Box>
+                {data[9].name} : Rs. {props.data.stamp_duty}
+              </Box>
+              <Box display="inline-flex">
+                <Box
+                  backgroundColor="#993366"
+                  marginRight="10px"
+                  height="9px"
+                  width="9px"
+                ></Box>
+                {data[10].name} : Rs. {props.data.mf_redemption}
+              </Box>
+            </div>
+          </Box>
+        </Box>
+      </Box>
+    </>
   );
 };
 
