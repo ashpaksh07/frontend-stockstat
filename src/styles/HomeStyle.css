@@ -196,4 +196,26 @@
   .actionClass h2 {
     font-size: 15px;
   }
+
+  .aboutusimage {
+    height: 35vh;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .contactimage {
+    height: 35vh;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
