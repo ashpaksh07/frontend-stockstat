@@ -17,12 +17,13 @@ import Gif2 from "../images/mobile.gif";
 const Home = () => {
   const navigate = useNavigate();
   const [currentTabIndex, setCurrentTabIndex] = useState(0);
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = useState(false);
+  const [apierror, setApiError] = useState(false);
   const ref = useRef(null);
 
   const apiUrl =
     "https://backend-stockstat-443-33yyspgzpa-as.a.run.app/api/analyse";
-  //const apiUrl = "http://localhost:8000/api/analyse";
+  // const apiUrl = "http://localhost:8000/api/analyse";
 
   const allowedExtensions = ["csv"];
   const [error, setError] = useState("");
@@ -54,9 +55,14 @@ const Home = () => {
         .post(apiUrl, jdata, setLoading(true))
         .then((res) => {
           setLoading(false);
+          setApiError(false);
           navigate("/dashboard", { state: res.data });
         })
-        .catch((error) => console.error("Error: $(error) "));
+        .catch((error) => {
+          console.log(error);
+          setLoading(false);
+          setApiError(true);
+        });
     };
     reader.readAsText(file);
   };
@@ -200,6 +206,18 @@ const Home = () => {
                 <p>Loading...</p>
                 <br />
                 <LinearProgress />
+              </Box>
+            ) : (
+              ""
+            )}
+            {apierror ? (
+              <Box
+                width="300px"
+                sx={{ paddingTop: "40px", marginLeft: "95px" }}
+              >
+                <Alert variant="outlined" severity="error">
+                  Something went wrong!
+                </Alert>
               </Box>
             ) : (
               ""

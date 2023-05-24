@@ -40,9 +40,9 @@ function Header() {
             Home
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to={"/dashboard"}>Dashboard</NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink to={"/about"}>About Us</NavLink>
         </li>
@@ -74,14 +74,14 @@ function Header() {
               component="div"
               sx={{ flexGrow: 1 }}
             >
-              <Box sx={{ ml: 5 }}>
+              <Box sx={{ ml: 5, mt: 1.3 }}>
                 <Link to={"/"}>
                   <img
                     loading="lazy"
                     src={logo}
                     alt="logo"
-                    height={"63"}
-                    width="230"
+                    height="45"
+                    width="190"
                   />
                 </Link>
               </Box>
