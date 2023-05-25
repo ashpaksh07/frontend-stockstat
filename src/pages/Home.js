@@ -71,7 +71,7 @@ const Home = () => {
             setApiError(true);
           });
       } else {
-        return setError("Not a valid Zerodha file");
+        return setError("Not a valid Zerodha ledger file");
       }
     };
     reader.readAsText(file);
