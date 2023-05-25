@@ -49,20 +49,30 @@ const Home = () => {
       const csv = Papa.parse(target.result, { header: true });
       const parsedData = csv?.data;
       const jdata = { items: parsedData };
+      let checkstr;
+      try {
+        checkstr = jdata.items[0]["particulars"];
+      } catch {
+        return setError("Not a valid Zerodha file");
+      }
 
       // axios call to /api/analyse api
-      axios
-        .post(apiUrl, jdata, setLoading(true))
-        .then((res) => {
-          setLoading(false);
-          setApiError(false);
-          navigate("/dashboard", { state: res.data });
-        })
-        .catch((error) => {
-          console.log(error);
-          setLoading(false);
-          setApiError(true);
-        });
+      if (checkstr === "Opening Balance") {
+        axios
+          .post(apiUrl, jdata, setLoading(true))
+          .then((res) => {
+            setLoading(false);
+            setApiError(false);
+            navigate("/dashboard", { state: res.data });
+          })
+          .catch((error) => {
+            console.log(error);
+            setLoading(false);
+            setApiError(true);
+          });
+      } else {
+        return setError("Not a valid Zerodha file");
+      }
     };
     reader.readAsText(file);
   };
