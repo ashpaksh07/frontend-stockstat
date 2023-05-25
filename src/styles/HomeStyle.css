@@ -55,6 +55,11 @@
   color: #505050;
 }
 
+.actionClass p {
+  color: #505050;
+  font-size: 12px;
+}
+
 .actionClass button {
   background-color: #298bea;
   margin-top: 50px;
@@ -126,7 +131,7 @@
   width: 260px;
 }
 
-/* mobile responsive code  */
+/* <<<<<<<<<<<<< mobile responsive code >>>>>>>>>>>>>> */
 @media only screen and (max-width: 600px) {
   .bannerContainer1 {
     margin-top: 40px;
@@ -217,5 +222,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  .actionClass p {
+    color: #505050;
+    font-size: 8px;
   }
 }

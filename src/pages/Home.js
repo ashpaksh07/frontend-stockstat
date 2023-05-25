@@ -53,7 +53,7 @@ const Home = () => {
       try {
         checkstr = jdata.items[0]["particulars"];
       } catch {
-        return setError("Not a valid Zerodha file");
+        return setError("Not a valid Zerodha ledger file");
       }
 
       // axios call to /api/analyse api
@@ -192,6 +192,10 @@ const Home = () => {
               <br />
               Click on Choose File to upload
             </h2>
+            <p>
+              Downloaded file name will be ledger-XXXXX.csv (XXXXX is your
+              Zerodha id)
+            </p>
             <input
               onChange={handleFileChange}
               id="csvInput"
