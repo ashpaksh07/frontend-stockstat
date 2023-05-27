@@ -66,19 +66,19 @@ const Contact = () => {
                     <TableRow>
                       <TableCell>
                         <EmailIcon sx={{ color: "#298BEA", pt: 1 }} />{" "}
-                        ashpaksh7@gmail.com
+                        whiteblokc@gmail.com
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
                         <InstagramIcon sx={{ color: "#298BEA", pt: 1 }} />{" "}
-                        @iam_ashpak
+                        @whiteblokc
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
                         <SupportAgentIcon sx={{ color: "#298BEA", pt: 1 }} />{" "}
-                        ashpaksh7@gmail.com
+                        +91 81759 70707
                       </TableCell>
                     </TableRow>
                   </TableBody>
@@ -136,19 +136,19 @@ const Contact = () => {
                     <TableRow>
                       <TableCell>
                         <EmailIcon sx={{ color: "#298BEA", pt: 1 }} />{" "}
-                        ashpaksh7@gmail.com
+                        whiteblokc@gmail.com
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
                         <InstagramIcon sx={{ color: "#298BEA", pt: 1 }} />{" "}
-                        @iam_ashpak
+                        @whiteblokc
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
                         <SupportAgentIcon sx={{ color: "#298BEA", pt: 1 }} />{" "}
-                        ashpaksh7@gmail.com
+                        +91 81759 70707
                       </TableCell>
                     </TableRow>
                   </TableBody>
